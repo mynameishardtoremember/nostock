@@ -1,0 +1,57 @@
+{
+  "name": "NoStock",
+  "version": "0.1",
+  "manifest_version": 2,
+ 
+  "description": "NoStock", 
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+
+  "permissions": [ 
+    "activeTab",
+    "alarms",
+    "notifications",
+    "storage",
+    "tabs",
+    "*://amazon.com/*",
+    "*://*.amazon.com/*",
+    "*://amd.com/*",
+    "*://*.amd.com/*",
+    "*://bestbuy.com/*",
+    "*://*.bestbuy.com/*",
+    "*://bhphotovideo.com/*",
+    "*://*.bhphotovideo.com/*",
+    "*://newegg.com/*",
+    "*://*.newegg.com/*",
+    "*://walmart.com/*",
+    "*://*.walmart.com/*"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+
+  "web_accessible_resources": [ "dashboard.html", "dashboard.js" ],
+
+  "externally_connectable": {
+    "matches": [
+      "*://amazon.com/*",
+      "*://*.amazon.com/*",
+      "*://amd.com/*",
+      "*://*.amd.com/*",
+      "*://bestbuy.com/*",
+      "*://*.bestbuy.com/*",
+      "*://bhphotovideo.com/*",
+      "*://*.bhphotovideo.com/*",
+      "*://newegg.com/*",
+      "*://*.newegg.com/*",
+      "*://walmart.com/*",
+      "*://*.walmart.com/*"
+    ]
+  }
+}
